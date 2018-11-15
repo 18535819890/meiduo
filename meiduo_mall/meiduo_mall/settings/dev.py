@@ -25,6 +25,12 @@ SECRET_KEY = '_khd0o%-%g2z9_-_jdo#g4=6+k2l_%(p7fcvmva8$8*z3&ky!_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+import sys
+# print(sys.path)
+# 将apps加入到导包路径中
+
+sys.path.insert(0,os.path.join(BASE_DIR,'apps'))
+# print(sys.path)
 
 # Application definition
 
@@ -35,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework'
+    'rest_framework',
+    'users.apps.UsersConfig'
+
 ]
 
 MIDDLEWARE = [
@@ -186,3 +194,5 @@ REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'meiduo_mall.utils.exceptions.exception_handler',
 }
+
+AUTH_USER_MODEL = 'users.User'# 指定自定义用户模型类
