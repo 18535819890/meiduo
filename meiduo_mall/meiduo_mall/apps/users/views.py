@@ -37,3 +37,31 @@ class Sms_View(APIView):
         # t.start()
         # 返回结果
         return Response({"message": "ok"})
+
+class User_View(APIView):
+    """
+        判断用户名号
+    """
+    def get(self,request,username):
+        #获取参数,正则匹配
+        #查询数据库中name所对应数据对象的数量
+        count=User.objects.filter(username=username).count()
+        #返回结果
+        return Response({
+            'count':count
+        })
+
+class Mobile_View(APIView):
+    """
+         判断手机号
+     """
+    def get(self,request,mobile):
+
+        #获取mobile,正则匹配
+        #查询数据库中mobile所对应数据对象的数量
+        count=User.objects.filter(mobile=mobile).count()
+        #返回结果
+        return Response({
+            'mobile':mobile,
+            'count':count,
+        })

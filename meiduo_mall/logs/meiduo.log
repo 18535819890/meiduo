@@ -130,3 +130,29 @@ INFO 2018-11-16 21:11:44,429 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1"
 WARNING 2018-11-16 21:12:46,231 base 152 Not Found: /mobiles/18535819898/count/
 WARNING 2018-11-16 21:12:46,258 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 404 2207
 INFO 2018-11-16 21:12:46,342 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+WARNING 2018-11-16 21:29:01,241 base 152 Not Found: /
+WARNING 2018-11-16 21:29:01,244 basehttp 124 "GET / HTTP/1.1" 404 2482
+ERROR 2018-11-16 21:32:31,577 exception 135 Internal Server Error: /usernames/python/count/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: get() got an unexpected keyword argument 'username'
+ERROR 2018-11-16 21:32:31,640 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 500 17715
+INFO 2018-11-16 21:33:47,211 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+INFO 2018-11-16 21:34:06,278 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-16 21:34:06,284 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-16 21:34:06,385 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
