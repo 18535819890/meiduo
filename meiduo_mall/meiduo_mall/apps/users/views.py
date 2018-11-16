@@ -29,6 +29,7 @@ class Sms_View(APIView):
         pl.execute()
         # 发送短信
         send_sms_code.delay(mobile, sms_code)
+
         # ccp=CCP()
         # ccp.send_template_sms(mobile,[sms_code,'5'],1)
         # 异步发送短信
