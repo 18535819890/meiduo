@@ -289,3 +289,186 @@ INFO 2018-11-18 11:50:32,297 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
 INFO 2018-11-18 11:50:32,387 basehttp 124 "GET /mobiles/18535819899/count/ HTTP/1.1" 200 34
 INFO 2018-11-18 11:50:32,402 basehttp 124 "GET /usernames/python1/count/ HTTP/1.1" 200 11
 INFO 2018-11-18 11:51:17,103 basehttp 124 "POST /users/ HTTP/1.1" 201 52
+INFO 2018-11-18 20:53:11,138 basehttp 124 "GET /usernames/python3/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:53:39,534 basehttp 124 "GET /mobiles/18535817777/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:53:41,821 basehttp 124 "GET /mobiles/18535817777/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:53:41,872 basehttp 124 "GET /sms_codes/18535817777/ HTTP/1.1" 200 16
+INFO 2018-11-18 20:53:50,974 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-11-18 20:53:51,030 basehttp 124 "GET /mobiles/18535817777/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:53:51,039 basehttp 124 "GET /usernames/python3/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:53:51,090 basehttp 124 "POST /users/ HTTP/1.1" 201 52
+INFO 2018-11-18 20:55:19,921 basehttp 124 "GET /usernames/python4/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:55:30,026 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:55:30,061 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-18 20:55:30,067 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:56:04,722 basehttp 124 "GET /usernames/python4/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:56:15,098 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:15,154 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:15,174 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:15,526 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:15,539 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:19,067 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:19,085 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:20,235 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:20,248 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:20,617 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:20,627 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:20,816 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:20,839 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:56:21,037 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:21,041 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:22,271 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+WARNING 2018-11-18 20:56:22,274 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 400 30
+INFO 2018-11-18 20:56:43,174 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:56:43,175 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-18 20:56:52,685 basehttp 124 "GET /usernames/python4/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:56:52,705 basehttp 124 "GET /mobiles/18535818888/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:58:07,641 basehttp 124 "GET /usernames/python5/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:58:17,295 basehttp 124 "GET /mobiles/18535819999/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:58:17,380 basehttp 124 "GET /mobiles/18535819999/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 20:58:17,445 basehttp 124 "GET /sms_codes/18535819999/ HTTP/1.1" 200 16
+INFO 2018-11-18 20:58:25,214 basehttp 124 "GET /usernames/python5/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 20:58:25,223 basehttp 124 "GET /mobiles/18535819999/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 21:11:44,954 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-18 21:11:45,110 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 207
+INFO 2018-11-18 21:22:58,797 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-18 21:23:55,029 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-18 21:25:40,814 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-18 21:26:44,799 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-18 21:28:21,543 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-18 21:30:52,597 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 176
+INFO 2018-11-18 21:45:10,999 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-11-18 21:45:11,108 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+WARNING 2018-11-18 21:45:52,540 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-18 21:48:02,899 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+ERROR 2018-11-18 21:54:20,085 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/views.py", line 57, in post
+    if serializer.is_valid():
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/serializers.py", line 50, in validate
+    user = authenticate(**credentials)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 33, in _get_backends
+    'No authentication backends have been defined. Does '
+django.core.exceptions.ImproperlyConfigured: No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain anything?
+ERROR 2018-11-18 21:54:20,295 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 19820
+ERROR 2018-11-18 21:54:28,699 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/views.py", line 57, in post
+    if serializer.is_valid():
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/serializers.py", line 50, in validate
+    user = authenticate(**credentials)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 33, in _get_backends
+    'No authentication backends have been defined. Does '
+django.core.exceptions.ImproperlyConfigured: No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain anything?
+ERROR 2018-11-18 21:54:28,815 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 19820
+ERROR 2018-11-18 21:54:29,733 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/views.py", line 57, in post
+    if serializer.is_valid():
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/serializers.py", line 50, in validate
+    user = authenticate(**credentials)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 33, in _get_backends
+    'No authentication backends have been defined. Does '
+django.core.exceptions.ImproperlyConfigured: No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain anything?
+ERROR 2018-11-18 21:54:29,805 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 19820
+INFO 2018-11-18 21:55:31,414 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+ERROR 2018-11-18 21:55:31,455 exception 135 Internal Server Error: /authorizations/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/views.py", line 57, in post
+    if serializer.is_valid():
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/serializers.py", line 50, in validate
+    user = authenticate(**credentials)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 68, in authenticate
+    for backend, backend_path in _get_backends(return_tuples=True):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/__init__.py", line 33, in _get_backends
+    'No authentication backends have been defined. Does '
+django.core.exceptions.ImproperlyConfigured: No authentication backends have been defined. Does AUTHENTICATION_BACKENDS contain anything?
+ERROR 2018-11-18 21:55:31,551 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 19820
+WARNING 2018-11-18 21:56:00,834 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-18 21:59:53,330 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209

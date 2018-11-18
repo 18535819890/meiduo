@@ -214,6 +214,7 @@ REST_FRAMEWORK = {
 #JWT_EXPIRATION_DELTA 指明token的有效期
 JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'users.utils.jwt_response_payload_handler',
 }
 
 AUTH_USER_MODEL = 'users.User'# 指定自定义用户模型类
@@ -226,3 +227,7 @@ CORS_ORIGIN_WHITELIST = (
     'api.meiduo.site:8000'
 )
 CORS_ALLOW_CREDENTIALS = True  # 允许携带cookie
+
+AUTHENTICATION_BACKENDS = [
+    'users.utils.UsernameMobileAuthBackend',
+]

@@ -69,4 +69,6 @@ class CreateUserSerializer(serializers.ModelSerializer):
         payload = jwt_payload_handler(user)
         token = jwt_encode_handler(payload)
 
+        user.token=token
+
         return user
