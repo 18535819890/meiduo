@@ -2,6 +2,8 @@ from rest_framework import serializers
 from django_redis import get_redis_connection
 from users.models import User
 import re
+from rest_framework_jwt.settings import api_settings
+
 
 class CreateUserSerializer(serializers.ModelSerializer):
     #显示模型类中没有的字段
@@ -60,5 +62,11 @@ class CreateUserSerializer(serializers.ModelSerializer):
         # 模型类数据保存
         user=User.objects.create_user(username=validated_data["username"],password=validated_data['password'],
                                  mobile=validated_data['mobile'])
+        # jwt加密
+        jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
+        jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
+
+        payload = jwt_payload_handler(user)
+        token = jwt_encode_handler(payload)
 
         return user
