@@ -156,3 +156,121 @@ INFO 2018-11-16 21:33:47,211 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1"
 INFO 2018-11-16 21:34:06,278 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
 INFO 2018-11-16 21:34:06,284 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
 INFO 2018-11-16 21:34:06,385 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:02:42,567 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:02:57,332 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:02:57,417 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:02:57,817 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+INFO 2018-11-18 10:08:00,754 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:08:20,002 basehttp 124 "GET /mobiles/18535819899/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:08:22,244 basehttp 124 "GET /mobiles/18535819899/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:08:22,286 basehttp 124 "GET /sms_codes/18535819899/ HTTP/1.1" 200 16
+INFO 2018-11-18 10:12:22,460 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:14:18,196 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+INFO 2018-11-18 10:14:18,203 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:14:18,237 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:14:32,073 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-11-18 10:14:32,088 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:14:32,102 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+ERROR 2018-11-18 10:16:04,649 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 20, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 236, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 437, in run_validation
+    value = self.validate(value)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 53, in validate
+    if attrs["sms_code"] != rel_sms_code.encode():
+AttributeError: 'bytes' object has no attribute 'encode'
+ERROR 2018-11-18 10:16:05,046 basehttp 124 "POST /users/ HTTP/1.1" 500 19197
+INFO 2018-11-18 10:17:01,079 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:17:15,743 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:17:17,999 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:17:18,106 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+INFO 2018-11-18 10:17:28,025 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:17:28,035 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+ERROR 2018-11-18 10:18:44,112 exception 135 Internal Server Error: /users/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 192, in post
+    return self.create(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 21, in create
+    self.perform_create(serializer)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 26, in perform_create
+    serializer.save()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 214, in save
+    self.instance = self.create(validated_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 959, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `User.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `User.objects.create()`. You may need to make the field read-only, or override the CreateUserSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 940, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/query.py", line 392, in create
+    obj = self.model(**kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/contrib/auth/base_user.py", line 68, in __init__
+    super(AbstractBaseUser, self).__init__(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/db/models/base.py", line 573, in __init__
+    raise TypeError("'%s' is an invalid keyword argument for this function" % list(kwargs)[0])
+TypeError: 'password2' is an invalid keyword argument for this function
+
+ERROR 2018-11-18 10:18:44,264 basehttp 124 "POST /users/ HTTP/1.1" 500 22902
+INFO 2018-11-18 10:22:24,787 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:22:36,005 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:22:37,123 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:22:37,180 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:22:37,203 basehttp 124 "GET /sms_codes/18535819898/ HTTP/1.1" 200 16
+INFO 2018-11-18 10:22:47,845 basehttp 124 "GET /usernames/python/count/ HTTP/1.1" 200 11
+INFO 2018-11-18 10:22:47,865 basehttp 124 "GET /mobiles/18535819898/count/ HTTP/1.1" 200 34
+INFO 2018-11-18 10:23:41,841 basehttp 124 "POST /users/ HTTP/1.1" 201 51

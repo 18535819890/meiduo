@@ -3,6 +3,7 @@ from django_redis import get_redis_connection
 from django.shortcuts import render
 from threading import Thread
 from rest_framework import status
+from rest_framework.generics import CreateAPIView
 from rest_framework.views import APIView
 from meiduo_mall.libs.yuntongxun.sms import CCP
 from users.models import User
@@ -11,6 +12,9 @@ from celery_tasks.sms_code.tasks import send_sms_code
 
 
 # Create your views here.
+from users.serializers import CreateUserSerializer
+
+
 class Sms_View(APIView):
     def get(self, request, mobile):
         # 获取手机号
@@ -22,6 +26,7 @@ class Sms_View(APIView):
             return Response({"error": "请求过于频繁"}, status=status.HTTP_400_BAD_REQUEST)
         # 生成短信验证码
         sms_code = '%06d' % randint(0, 999999)
+        print(sms_code)
         # 保存到reids
         pl = coon.pipeline()  # 生成管道对象
         pl.setex('sms_code_%s' % mobile, 300, sms_code)
@@ -65,3 +70,7 @@ class Mobile_View(APIView):
             'mobile':mobile,
             'count':count,
         })
+
+
+class Users_View(CreateAPIView):
+    serializer_class = CreateUserSerializer
