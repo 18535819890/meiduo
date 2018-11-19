@@ -472,3 +472,287 @@ django.core.exceptions.ImproperlyConfigured: No authentication backends have bee
 ERROR 2018-11-18 21:55:31,551 basehttp 124 "POST /authorizations/ HTTP/1.1" 500 19820
 WARNING 2018-11-18 21:56:00,834 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
 INFO 2018-11-18 21:59:53,330 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+WARNING 2018-11-19 09:53:20,591 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:20,591 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:21,431 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:21,431 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:22,632 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:22,633 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:23,689 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:23,690 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:23,914 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:23,914 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:24,137 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:24,139 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:24,988 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:24,988 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:25,472 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:25,473 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+WARNING 2018-11-19 09:53:43,178 base 152 Not Found: /oauth/qq/authorization/
+WARNING 2018-11-19 09:53:43,178 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 404 3011
+ERROR 2018-11-19 09:54:47,694 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 29, in get
+    return  Response({"login_url":login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 09:54:47,740 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 18418
+ERROR 2018-11-19 09:57:11,944 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 28, in get
+    return Response({"login_url": login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 09:57:11,975 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 18418
+ERROR 2018-11-19 10:04:50,995 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 28, in get
+    return Response({"login_url": login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 10:04:51,118 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 19086
+WARNING 2018-11-19 10:10:02,075 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-11-19 10:10:02,121 basehttp 124 "GET /oauth/qq/user/?code=E8E838D1846A03597440FB98CFCA18BA HTTP/1.1" 404 3080
+ERROR 2018-11-19 10:11:53,239 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 29, in get
+    return Response({'login_url': login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 10:11:53,360 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 19086
+ERROR 2018-11-19 10:14:15,489 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 29, in get
+    return Response({'login_url': login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 10:14:15,530 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 18418
+ERROR 2018-11-19 10:17:46,464 exception 135 Internal Server Error: /oauth/qq/authorization/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 49, in get
+    return Response({'login_url': login_url})
+TypeError: __init__() takes 1 positional argument but 2 were given
+ERROR 2018-11-19 10:17:46,549 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 500 18418
+INFO 2018-11-19 10:20:01,069 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+WARNING 2018-11-19 10:20:08,220 base 152 Not Found: /oauth/qq/user/
+WARNING 2018-11-19 10:20:08,239 basehttp 124 "GET /oauth/qq/user/?code=7FA95921206DDEBD6FBDC55403E5C09D HTTP/1.1" 404 3080
+ERROR 2018-11-19 10:55:23,659 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 10:55:23,706 basehttp 124 "GET /oauth/qq/user/?code=7FA95921206DDEBD6FBDC55403E5C09D HTTP/1.1" 500 18679
+INFO 2018-11-19 10:55:25,470 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-19 10:55:25,633 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 10:55:25,657 basehttp 124 "GET /oauth/qq/user/?code=7FA95921206DDEBD6FBDC55403E5C09D HTTP/1.1" 500 18679
+ERROR 2018-11-19 10:55:26,687 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 10:55:26,727 basehttp 124 "GET /oauth/qq/user/?code=7FA95921206DDEBD6FBDC55403E5C09D HTTP/1.1" 500 18680
+ERROR 2018-11-19 10:55:27,535 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 10:55:27,549 basehttp 124 "GET /oauth/qq/user/?code=7FA95921206DDEBD6FBDC55403E5C09D HTTP/1.1" 500 18680
+ERROR 2018-11-19 10:56:04,449 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 51, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 10:56:04,462 basehttp 124 "GET /oauth/qq/user/?code=EAECCA8CE9710DBEB774C75741EDF771 HTTP/1.1" 500 18617
+INFO 2018-11-19 10:56:13,009 basehttp 124 "GET /oauth/qq/user/?code=EAECCA8CE9710DBEB774C75741EDF771 HTTP/1.1" 200 4
+INFO 2018-11-19 10:58:27,714 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:00:53,089 basehttp 124 "GET /oauth/qq/user/?code=37FC133AE7783A8A076CC5ABEDC53144 HTTP/1.1" 200 4
+INFO 2018-11-19 11:01:45,945 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-19 11:02:20,878 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:03:25,622 basehttp 124 "GET /oauth/qq/user/?code=C33DC331B054608BD0EE347A74093E35 HTTP/1.1" 200 4
+INFO 2018-11-19 11:04:52,535 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:05:21,902 basehttp 124 "GET /oauth/qq/user/?code=4300A84C196666D9311A377696F57621 HTTP/1.1" 200 4
