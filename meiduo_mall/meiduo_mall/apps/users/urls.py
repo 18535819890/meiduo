@@ -7,6 +7,7 @@ urlpatterns=[
     url(r"^mobiles/(?P<mobile>\d+)/count/$",views.Mobile_View.as_view()),
     url(r"^users/$",views.Users_View.as_view()),
     url(r'^authorizations/$', obtain_jwt_token),
-
-
+    url(r'^user/$', views.UserDetailView.as_view()),
+    url(r'^email/$', views.EmailView.as_view()),
+    url(r'^emails/verification/$',views.EmailVerifyView.as_view()),
 ]

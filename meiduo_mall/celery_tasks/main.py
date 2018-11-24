@@ -1,3 +1,4 @@
+#encoding:utf-8
 from celery import Celery
 
 # 为celery使用django配置文件进行设置

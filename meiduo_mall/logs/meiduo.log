@@ -756,3 +756,1294 @@ INFO 2018-11-19 11:02:20,878 basehttp 124 "GET /oauth/qq/authorization/?next=/ H
 INFO 2018-11-19 11:03:25,622 basehttp 124 "GET /oauth/qq/user/?code=C33DC331B054608BD0EE347A74093E35 HTTP/1.1" 200 4
 INFO 2018-11-19 11:04:52,535 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
 INFO 2018-11-19 11:05:21,902 basehttp 124 "GET /oauth/qq/user/?code=4300A84C196666D9311A377696F57621 HTTP/1.1" 200 4
+INFO 2018-11-19 11:20:34,407 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:20:56,642 basehttp 124 "GET /oauth/qq/user/?code=D0D23E538B7E2AA60A89CF66B7C2B7BB HTTP/1.1" 200 4
+INFO 2018-11-19 11:21:53,387 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:22:25,781 basehttp 124 "GET /oauth/qq/user/?code=D05A7C88C4833A217FA4ECB15C44533A HTTP/1.1" 200 4
+INFO 2018-11-19 11:28:36,322 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 11:29:06,334 basehttp 124 "GET /oauth/qq/user/?code=3198F1785D19A9F62548A2C0D33B3A57 HTTP/1.1" 200 4
+INFO 2018-11-19 20:49:10,294 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 20:49:59,097 basehttp 124 "GET /oauth/qq/user/?code=427A6A2E15522D80062F2B4FCCCE70E5 HTTP/1.1" 200 51
+ERROR 2018-11-19 20:50:34,760 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 53, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-19 20:50:34,868 basehttp 124 "GET /oauth/qq/user/?code=427A6A2E15522D80062F2B4FCCCE70E5 HTTP/1.1" 500 19347
+INFO 2018-11-19 21:03:11,818 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 21:03:46,511 basehttp 124 "GET /oauth/qq/user/?code=E99530A48EAF74D3B4B9A3D2213547A7 HTTP/1.1" 200 51
+INFO 2018-11-19 21:04:50,565 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 21:06:10,161 basehttp 124 "GET /oauth/qq/user/?code=0FD9DE31DA468DFE04B33595E2553FFC HTTP/1.1" 200 51
+INFO 2018-11-19 21:11:00,812 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-19 21:11:30,394 basehttp 124 "GET /oauth/qq/user/?code=B03E7DA694CBF1014FE5DCC7DB0BEF90 HTTP/1.1" 200 233
+INFO 2018-11-21 10:17:49,256 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:18:21,740 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:18:54,434 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:20:08,616 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:20:28,413 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+WARNING 2018-11-21 10:20:28,530 basehttp 124 "POST /authorizations/ HTTP/1.1" 400 67
+INFO 2018-11-21 10:20:34,028 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 10:20:38,427 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:20:39,478 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:21:08,112 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:21:48,783 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:23:53,990 basehttp 124 "GET /oauth/qq/user/?code=485A77CB3644F407DB67C34B1AF066BF HTTP/1.1" 200 233
+INFO 2018-11-21 10:25:10,795 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-21 10:26:20,709 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-11-21 10:26:20,780 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 55
+ERROR 2018-11-21 10:34:01,579 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 57, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-21 10:34:01,719 basehttp 124 "GET /oauth/qq/user/?code=485A77CB3644F407DB67C34B1AF066BF HTTP/1.1" 500 18679
+INFO 2018-11-21 10:34:38,603 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:34:59,036 basehttp 124 "GET /oauth/qq/user/?code=AB7F5E07266A2440C655E770BC4F6C9B HTTP/1.1" 200 233
+INFO 2018-11-21 10:36:30,571 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-21 10:36:55,533 basehttp 124 "OPTIONS /oauth/qq/user/ HTTP/1.1" 200 0
+WARNING 2018-11-21 10:36:55,593 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 400 55
+INFO 2018-11-21 10:38:43,047 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:38:49,653 basehttp 124 "GET /oauth/qq/user/?code=44A107357CDC8D3DC87FCDD0007B4625 HTTP/1.1" 200 233
+INFO 2018-11-21 10:38:59,443 basehttp 124 "GET /sms_codes/18535818888/ HTTP/1.1" 200 16
+INFO 2018-11-21 10:39:12,167 basehttp 124 "POST /oauth/qq/user/ HTTP/1.1" 201 232
+INFO 2018-11-21 10:42:10,521 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 10:42:41,673 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 10:42:41,813 basehttp 124 "GET /oauth/qq/user/?code=85B31A7866D58B1160D6CE63B6A5F914 HTTP/1.1" 500 19823
+INFO 2018-11-21 10:45:04,416 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 10:45:33,194 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 10:45:33,312 basehttp 124 "GET /oauth/qq/user/?code=176B78D5EB2A60F93E33F575A4BBBB17 HTTP/1.1" 500 19823
+INFO 2018-11-21 10:48:23,029 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 10:49:09,764 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+WARNING 2018-11-21 10:51:17,201 base 152 Not Found: /
+WARNING 2018-11-21 10:51:17,210 basehttp 124 "GET / HTTP/1.1" 404 2910
+WARNING 2018-11-21 10:51:17,311 base 152 Not Found: /favicon.ico
+WARNING 2018-11-21 10:51:17,313 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 2961
+INFO 2018-11-21 10:51:33,337 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 10:51:46,685 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 10:51:46,790 basehttp 124 "GET /oauth/qq/user/?code=C79309CCD0B0A60EA6D133AE67F19D3F HTTP/1.1" 500 19794
+INFO 2018-11-21 11:01:01,074 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 11:01:10,209 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 11:01:10,340 basehttp 124 "GET /oauth/qq/user/?code=E8D0F88E97BE2DCFB04F6A13074B3C89 HTTP/1.1" 500 19823
+ERROR 2018-11-21 11:03:40,048 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 57, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-21 11:03:40,117 basehttp 124 "GET /oauth/qq/user/?code=E8D0F88E97BE2DCFB04F6A13074B3C89 HTTP/1.1" 500 19347
+INFO 2018-11-21 11:04:43,767 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 11:04:59,237 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 11:04:59,304 basehttp 124 "GET /oauth/qq/user/?code=655C80D629C09D2296912849CCA10B78 HTTP/1.1" 500 19794
+INFO 2018-11-21 11:12:35,113 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 11:13:30,849 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 11:13:30,960 basehttp 124 "GET /oauth/qq/user/?code=8144180FA095EEC0F8215E63CACFE3A5 HTTP/1.1" 500 19794
+INFO 2018-11-21 11:17:45,220 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 11:17:45,308 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 11:17:57,096 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-21 11:17:57,186 base 152 Not Found: /user/
+WARNING 2018-11-21 11:17:57,191 basehttp 124 "GET /user/ HTTP/1.1" 404 2949
+WARNING 2018-11-21 11:18:33,468 base 152 Not Found: /areas/
+WARNING 2018-11-21 11:18:33,473 basehttp 124 "GET /areas/ HTTP/1.1" 404 2952
+INFO 2018-11-21 11:18:33,477 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-21 11:18:35,314 base 152 Not Found: /addresses/
+WARNING 2018-11-21 11:18:35,314 basehttp 124 "GET /addresses/ HTTP/1.1" 404 2964
+INFO 2018-11-21 11:18:48,308 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 11:19:09,864 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 11:19:09,894 basehttp 124 "GET /oauth/qq/user/?code=CE92B881C23C1521C20E737E7FBA18D5 HTTP/1.1" 500 19126
+INFO 2018-11-21 11:34:50,456 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 11:35:49,558 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 11:36:00,057 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+ERROR 2018-11-21 11:36:28,369 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 56, in retrieve
+    instance = self.get_object()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 94, in get_object
+    (self.__class__.__name__, lookup_url_kwarg)
+AssertionError: Expected view UserDetailView to be called with a URL keyword argument named "pk". Fix your URL conf, or set the `.lookup_field` attribute on the view correctly.
+ERROR 2018-11-21 11:36:28,521 basehttp 124 "GET /user/ HTTP/1.1" 500 19731
+ERROR 2018-11-21 11:40:06,082 exception 135 Internal Server Error: /user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 210, in get
+    return self.retrieve(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 58, in retrieve
+    return Response(serializer.data)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 560, in data
+    ret = super(Serializer, self).data
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 262, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 510, in to_representation
+    fields = self._readable_fields
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 376, in _readable_fields
+    field for field in self.fields.values()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 363, in fields
+    for key, value in self.get_fields().items():
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 1047, in get_fields
+    source, info, model, depth
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 1192, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 1304, in build_unknown_field
+    (field_name, model_class.__name__)
+django.core.exceptions.ImproperlyConfigured: Field name `email_active` is not valid for model `User`.
+ERROR 2018-11-21 11:40:06,273 basehttp 124 "GET /user/ HTTP/1.1" 500 20993
+INFO 2018-11-21 11:43:39,850 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 11:43:39,882 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 11:43:39,907 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 11:43:39,911 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3140
+INFO 2018-11-21 11:57:14,387 basehttp 124 "GET /user HTTP/1.1" 301 0
+WARNING 2018-11-21 11:57:14,436 basehttp 124 "GET /user/ HTTP/1.1" 401 43
+INFO 2018-11-21 11:59:21,258 basehttp 124 "GET /user HTTP/1.1" 301 0
+WARNING 2018-11-21 11:59:21,273 basehttp 124 "GET /user/ HTTP/1.1" 401 43
+INFO 2018-11-21 11:59:22,639 basehttp 124 "GET /user HTTP/1.1" 301 0
+WARNING 2018-11-21 11:59:22,675 basehttp 124 "GET /user/ HTTP/1.1" 401 43
+INFO 2018-11-21 12:00:02,911 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 12:00:07,558 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 12:00:07,589 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 12:00:07,612 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 12:00:07,614 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3140
+INFO 2018-11-21 12:00:46,424 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 12:43:11,081 basehttp 124 "GET /user HTTP/1.1" 301 0
+INFO 2018-11-21 12:43:44,774 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 12:43:49,039 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 12:43:49,053 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 20:19:49,925 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:49,938 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:49,941 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:49,945 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:51,595 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:52,099 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:52,318 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-21 20:19:52,542 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-21 20:20:53,838 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-21 20:20:53,940 basehttp 124 "GET /oauth/qq/user/?code=B41FF0392078198745623ECFDF52F24A HTTP/1.1" 500 19197
+INFO 2018-11-21 20:21:15,281 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:21:15,322 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 20:21:19,181 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:21:19,212 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 20:21:19,231 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 20:21:19,252 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:21:19,253 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3140
+INFO 2018-11-21 20:21:39,550 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+WARNING 2018-11-21 20:21:39,564 base 152 Not Found: /email/
+WARNING 2018-11-21 20:21:39,567 basehttp 124 "PUT /email/ HTTP/1.1" 404 3107
+WARNING 2018-11-21 20:21:49,173 base 152 Not Found: /email/
+WARNING 2018-11-21 20:21:49,174 basehttp 124 "PUT /email/ HTTP/1.1" 404 3107
+WARNING 2018-11-21 20:22:00,409 base 152 Not Found: /email/
+WARNING 2018-11-21 20:22:00,410 basehttp 124 "PUT /email/ HTTP/1.1" 404 3107
+INFO 2018-11-21 20:22:25,386 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+WARNING 2018-11-21 20:22:25,459 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:22:25,460 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3140
+WARNING 2018-11-21 20:22:48,483 base 152 Not Found: /email/
+WARNING 2018-11-21 20:22:48,484 basehttp 124 "PUT /email/ HTTP/1.1" 404 3107
+INFO 2018-11-21 20:23:53,769 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+WARNING 2018-11-21 20:23:53,788 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:23:53,792 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+WARNING 2018-11-21 20:24:12,256 base 152 Not Found: /email/
+WARNING 2018-11-21 20:24:12,258 basehttp 124 "PUT /email/ HTTP/1.1" 404 3263
+INFO 2018-11-21 20:24:52,640 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+WARNING 2018-11-21 20:24:52,661 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:24:52,662 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+WARNING 2018-11-21 20:25:16,613 base 152 Not Found: /email/
+WARNING 2018-11-21 20:25:16,613 basehttp 124 "PUT /email/ HTTP/1.1" 404 3263
+INFO 2018-11-21 20:27:19,867 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+WARNING 2018-11-21 20:27:19,890 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:27:19,893 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+ERROR 2018-11-21 20:27:35,720 exception 135 Internal Server Error: /email/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 101, in update
+    send_mail(subject,settings.EMAIL_FROM,[validated_data["email"]],html_message=html_message)
+TypeError: send_mail() missing 1 required positional argument: 'recipient_list'
+ERROR 2018-11-21 20:27:35,784 basehttp 124 "PUT /email/ HTTP/1.1" 500 19359
+INFO 2018-11-21 20:28:47,876 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 20:28:47,914 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:28:47,915 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:29:40,265 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 20:30:34,505 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 20:30:34,545 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:30:34,545 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:31:39,677 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:31:39,699 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-21 20:31:39,731 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 20:31:39,743 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:31:39,744 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:31:41,971 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:31:43,197 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 20:34:08,230 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 20:34:08,297 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:34:08,298 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:34:25,509 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:34:25,549 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-21 20:34:28,321 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 20:34:28,351 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:34:28,352 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:34:42,668 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+WARNING 2018-11-21 20:35:49,550 base 152 Not Found: /emails/verification/
+WARNING 2018-11-21 20:35:49,551 basehttp 124 "GET /emails/verification/?name=python4 HTTP/1.1" 404 3318
+INFO 2018-11-21 20:41:31,082 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:41:31,143 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-21 20:41:33,673 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 20:41:33,725 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-21 20:41:33,749 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 20:41:33,763 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:41:33,765 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:41:36,474 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+ERROR 2018-11-21 20:41:36,498 exception 135 Internal Server Error: /email/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 209, in save
+    self.instance = self.update(self.instance, validated_data)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/users/serializers.py", line 98, in update
+    token=tjs.dumps().decode()
+TypeError: dumps() missing 1 required positional argument: 'obj'
+ERROR 2018-11-21 20:41:36,528 basehttp 124 "PUT /email/ HTTP/1.1" 500 19272
+INFO 2018-11-21 20:41:56,795 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 20:41:56,825 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 20:41:56,828 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3296
+INFO 2018-11-21 20:42:29,925 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+WARNING 2018-11-21 20:42:55,584 base 152 Not Found: /emails/verification/
+WARNING 2018-11-21 20:42:55,585 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImV4cCI6MTU0MjgwNDQxNywiaWF0IjoxNTQyODA0MTE3fQ.eyJuYW1lIjoicHl0aG9uNCJ9.9SunlJD7mukgFFzUWUNRD17yw0woli81MmYC8DxJxsT3qGOovbMDk_yjh70LRTqNwDJdrvmCwhaOs5vreA5w-w HTTP/1.1" 404 3490
+INFO 2018-11-21 21:08:29,662 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:08:29,753 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 207
+INFO 2018-11-21 21:08:32,256 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:08:32,297 basehttp 124 "GET /user/ HTTP/1.1" 200 76
+INFO 2018-11-21 21:08:32,311 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 21:08:32,325 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:08:32,326 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:08:44,139 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:08:45,103 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:09:15,033 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDU3MjQsImV4cCI6MTU0MjgwNjAyNCwiYWxnIjoiSFM1MTIifQ.eyJuYW1lIjoicHl0aG9uIn0.auNfT-RxipRot2o7bPwB4pBlTEVxB8MJjWVgvY0nkQxdGqconIK8FmLx98w0BBjksr-e8wIhcBCw9vUpeQJKtA HTTP/1.1" 200 23
+INFO 2018-11-21 21:09:44,417 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDU3MjQsImV4cCI6MTU0MjgwNjAyNCwiYWxnIjoiSFM1MTIifQ.eyJuYW1lIjoicHl0aG9uIn0.auNfT-RxipRot2o7bPwB4pBlTEVxB8MJjWVgvY0nkQxdGqconIK8FmLx98w0BBjksr-e8wIhcBCw9vUpeQJKtA HTTP/1.1" 200 23
+INFO 2018-11-21 21:12:17,498 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDU3MjQsImV4cCI6MTU0MjgwNjAyNCwiYWxnIjoiSFM1MTIifQ.eyJuYW1lIjoicHl0aG9uIn0.auNfT-RxipRot2o7bPwB4pBlTEVxB8MJjWVgvY0nkQxdGqconIK8FmLx98w0BBjksr-e8wIhcBCw9vUpeQJKtA HTTP/1.1" 200 23
+INFO 2018-11-21 21:12:42,304 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+WARNING 2018-11-21 21:12:42,336 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:12:42,337 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:32:54,187 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:33:16,335 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 21:33:21,935 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:33:31,394 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 21:33:31,402 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 21:33:31,425 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:33:31,430 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:33:44,587 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:33:50,171 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:42:12,018 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-21 21:42:12,069 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:42:12,071 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:42:22,253 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:42:36,337 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDc3MzgsImFsZyI6IkhTNTEyIiwiZXhwIjoxNTQyODA4MDM4fQ.eyJuYW1lIjoicHl0aG9uMSJ9.TXA9nLr89UJ4NKW5WSZ3cMFkot4ioxSsTt4h4pQDQN24DEKfHDx-IJ9N62kwZCY5RjSOvNOGQOy6cl2uGA38bw HTTP/1.1" 200 23
+INFO 2018-11-21 21:42:44,150 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDc3MzgsImFsZyI6IkhTNTEyIiwiZXhwIjoxNTQyODA4MDM4fQ.eyJuYW1lIjoicHl0aG9uMSJ9.TXA9nLr89UJ4NKW5WSZ3cMFkot4ioxSsTt4h4pQDQN24DEKfHDx-IJ9N62kwZCY5RjSOvNOGQOy6cl2uGA38bw HTTP/1.1" 200 23
+INFO 2018-11-21 21:45:00,949 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:45:09,000 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 21:45:15,096 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:45:17,634 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-21 21:45:17,648 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 21:45:17,677 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:45:17,678 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:45:31,554 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:45:35,306 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:45:50,622 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDc5MzEsImFsZyI6IkhTNTEyIiwiZXhwIjoxNTQyODA4MjMxfQ.eyJuYW1lIjoicHl0aG9uNCJ9.jfPljgUnkysuywR2CiN_RbqATp4X8NtdVY2xfcbcmeMIJr8mAuniVZ0xk9RTLkU9tw_Ly1aERSqBKojvHeskYQ HTTP/1.1" 200 23
+INFO 2018-11-21 21:49:11,387 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:49:30,314 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 207
+INFO 2018-11-21 21:49:33,731 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:49:38,294 basehttp 124 "GET /user/ HTTP/1.1" 200 76
+INFO 2018-11-21 21:49:38,306 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-21 21:49:38,338 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:49:38,339 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:49:55,529 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-21 21:50:02,805 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:50:20,341 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+WARNING 2018-11-21 21:50:20,401 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:50:20,411 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+WARNING 2018-11-21 21:50:28,859 basehttp 124 "GET /user/ HTTP/1.1" 401 4943
+INFO 2018-11-21 21:50:28,922 basehttp 124 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3385
+INFO 2018-11-21 21:50:28,925 basehttp 124 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1131
+INFO 2018-11-21 21:50:28,927 basehttp 124 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121200
+INFO 2018-11-21 21:50:28,928 basehttp 124 "GET /static/rest_framework/js/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+INFO 2018-11-21 21:50:28,931 basehttp 124 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3597
+INFO 2018-11-21 21:50:28,932 basehttp 124 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2018-11-21 21:50:28,959 basehttp 124 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2018-11-21 21:50:28,964 basehttp 124 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2018-11-21 21:50:28,971 basehttp 124 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 37045
+INFO 2018-11-21 21:50:28,976 basehttp 124 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1735
+INFO 2018-11-21 21:50:29,088 basehttp 124 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+WARNING 2018-11-21 21:50:29,343 base 152 Not Found: /favicon.ico
+WARNING 2018-11-21 21:50:29,344 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3448
+INFO 2018-11-21 21:50:50,218 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:54:54,786 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-21 21:55:01,161 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+WARNING 2018-11-21 21:55:01,199 base 152 Not Found: /browse_histories/
+WARNING 2018-11-21 21:55:01,202 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-21 21:55:33,000 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-21 21:56:22,443 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4MDg1MTksImFsZyI6IkhTNTEyIiwiZXhwIjoxNTQyODA4ODE5fQ.eyJuYW1lIjoicHl0aG9uMSJ9.IHgA3HhHrARlYEr-3zGA1x4sLHBbAiNaSoO7riVBDutcuLS7JK-sMv8fbZHE3ZMyCduk3BWzlmXvc6ZwvTQuuQ HTTP/1.1" 200 16
+INFO 2018-11-22 09:51:45,741 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-22 09:51:53,062 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-22 09:51:57,409 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 09:52:00,764 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-22 09:52:00,791 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 09:52:00,834 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 09:52:00,841 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3466
+INFO 2018-11-22 09:52:06,164 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-22 09:52:06,197 base 152 Not Found: /areas/
+WARNING 2018-11-22 09:52:06,201 basehttp 124 "GET /areas/ HTTP/1.1" 404 3433
+WARNING 2018-11-22 09:52:06,290 base 152 Not Found: /addresses/
+WARNING 2018-11-22 09:52:06,292 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3445
+WARNING 2018-11-22 09:59:05,906 base 152 Not Found: /addresses/
+WARNING 2018-11-22 09:59:05,910 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3601
+INFO 2018-11-22 09:59:21,195 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 09:59:28,881 base 152 Not Found: /areas/520000/
+WARNING 2018-11-22 09:59:28,886 basehttp 124 "GET /areas/520000/ HTTP/1.1" 404 3610
+WARNING 2018-11-22 10:00:10,580 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:00:10,587 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3601
+INFO 2018-11-22 10:16:04,952 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-22 10:16:05,069 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:16:05,071 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3601
+INFO 2018-11-22 10:16:14,459 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 10:16:22,103 base 152 Not Found: /areas/140000/
+WARNING 2018-11-22 10:16:22,104 basehttp 124 "GET /areas/140000/ HTTP/1.1" 404 3610
+WARNING 2018-11-22 10:18:10,385 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:18:10,389 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3775
+INFO 2018-11-22 10:18:13,916 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 10:18:28,207 basehttp 124 "GET /areas/140000/ HTTP/1.1" 200 364
+INFO 2018-11-22 10:20:11,275 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 10:20:15,055 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+INFO 2018-11-22 10:20:15,064 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 10:20:15,078 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 10:20:15,082 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3796
+WARNING 2018-11-22 10:20:29,233 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:20:29,246 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3775
+INFO 2018-11-22 10:20:29,945 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 10:20:31,855 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+INFO 2018-11-22 10:20:31,882 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 10:20:31,907 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 10:20:31,913 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3796
+INFO 2018-11-22 10:20:35,197 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 10:20:49,784 basehttp 124 "GET /areas/140000/ HTTP/1.1" 200 364
+WARNING 2018-11-22 10:21:20,902 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:21:20,967 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3775
+INFO 2018-11-22 10:21:26,989 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 10:21:36,943 basehttp 124 "GET /areas/140000/ HTTP/1.1" 200 364
+INFO 2018-11-22 10:21:48,196 basehttp 124 "GET /areas/140100/ HTTP/1.1" 200 340
+WARNING 2018-11-22 10:21:56,550 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:21:56,552 basehttp 124 "POST /addresses/ HTTP/1.1" 404 3776
+INFO 2018-11-22 10:50:07,834 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-22 10:50:07,920 base 152 Not Found: /addresses/
+WARNING 2018-11-22 10:50:07,929 basehttp 124 "GET /addresses/ HTTP/1.1" 404 3775
+INFO 2018-11-22 10:50:10,778 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 10:50:18,617 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 34
+INFO 2018-11-22 10:50:38,912 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 532
+INFO 2018-11-22 10:50:39,262 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 424
+INFO 2018-11-22 10:50:47,497 basehttp 124 "GET /areas/130200/ HTTP/1.1" 200 463
+INFO 2018-11-22 11:36:14,968 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-22 11:36:15,149 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:36:15,168 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 11:36:19,683 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 11:36:41,886 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+INFO 2018-11-22 11:36:41,906 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 11:36:41,933 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 11:36:41,936 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 11:36:50,589 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:36:50,648 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:37:02,272 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 11:37:10,935 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+ERROR 2018-11-22 11:37:29,480 exceptions 25 [<areas.views.AddressView object at 0x7fdecd2c6c88>] (1048, "Column 'user_id' cannot be null")
+ERROR 2018-11-22 11:37:29,484 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 11:39:44,303 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+WARNING 2018-11-22 11:39:44,341 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 11:39:44,344 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 11:39:48,787 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:39:48,821 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:39:55,266 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 11:39:56,596 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+ERROR 2018-11-22 11:40:26,714 exceptions 25 [<areas.views.AddressView object at 0x7f329045ccc0>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 11:42:02,913 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-22 11:42:05,573 exceptions 25 [<areas.views.AddressView object at 0x7f329016ec18>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 11:42:05,577 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-22 11:42:20,436 exceptions 25 [<areas.views.AddressView object at 0x7f3290168198>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 11:42:20,438 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 11:43:51,858 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+WARNING 2018-11-22 11:43:51,901 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 11:43:51,913 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 11:44:03,623 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+WARNING 2018-11-22 11:44:03,680 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 11:44:03,683 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 11:44:06,982 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:44:07,032 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:44:11,271 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:44:11,324 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:44:21,661 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:44:21,699 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:45:17,813 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 11:45:19,220 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+ERROR 2018-11-22 11:45:43,856 exceptions 25 [<areas.views.AddressView object at 0x7f0a65dca7b8>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 11:45:43,858 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-22 11:46:09,627 exceptions 25 [<areas.views.AddressView object at 0x7f0a65b69ac8>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 11:46:09,639 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 11:47:48,809 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-22 11:47:57,734 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-22 11:48:01,786 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 11:48:08,998 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-22 11:48:09,009 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 11:48:09,041 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 11:48:09,044 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 11:48:19,408 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 11:48:19,419 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:48:19,475 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:48:38,644 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 11:48:38,680 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 11:58:19,666 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 34
+INFO 2018-11-22 11:59:37,965 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 532
+INFO 2018-11-22 12:00:34,480 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 12:00:34,495 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+WARNING 2018-11-22 12:00:34,551 basehttp 124 "GET /addresses/ HTTP/1.1" 405 45
+INFO 2018-11-22 20:09:22,745 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:11:14,836 base 152 Not Found: /
+WARNING 2018-11-22 20:11:14,845 basehttp 124 "GET / HTTP/1.1" 404 3881
+WARNING 2018-11-22 20:11:14,971 base 152 Not Found: /favicon.ico
+WARNING 2018-11-22 20:11:14,975 basehttp 124 "GET /favicon.ico HTTP/1.1" 404 3932
+INFO 2018-11-22 20:14:10,159 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:14:23,891 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-22 20:14:27,676 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:14:30,438 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-22 20:14:30,454 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:14:30,521 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 20:14:30,523 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 20:14:36,166 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:14:36,224 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-11-22 20:14:36,249 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/areas/views.py", line 45, in get
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 68, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'AddressView' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2018-11-22 20:14:36,527 basehttp 124 "GET /addresses/ HTTP/1.1" 500 19700
+INFO 2018-11-22 20:14:40,389 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 424
+INFO 2018-11-22 20:14:41,742 basehttp 124 "GET /areas/130300/ HTTP/1.1" 200 250
+ERROR 2018-11-22 20:15:06,278 exceptions 25 [<areas.views.AddressView object at 0x7fb09903fcf8>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 20:15:06,284 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-22 20:15:30,150 exceptions 25 [<areas.views.AddressView object at 0x7fb09904ceb8>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 20:15:30,152 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 20:17:35,090 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-22 20:17:35,128 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 20:17:35,132 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 20:17:44,903 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+ERROR 2018-11-22 20:17:44,943 exception 135 Internal Server Error: /addresses/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/areas/views.py", line 45, in get
+    queryset = self.filter_queryset(self.get_queryset())
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 68, in get_queryset
+    % self.__class__.__name__
+AssertionError: 'AddressView' should either include a `queryset` attribute, or override the `get_queryset()` method.
+ERROR 2018-11-22 20:17:45,054 basehttp 124 "GET /addresses/ HTTP/1.1" 500 19699
+INFO 2018-11-22 20:17:58,068 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:18:00,165 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+ERROR 2018-11-22 20:18:24,342 exceptions 25 [<areas.views.AddressView object at 0x7faed1410898>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 20:18:24,346 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+ERROR 2018-11-22 20:20:05,719 exceptions 25 [<areas.views.AddressView object at 0x7f48184c73c8>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 20:20:05,727 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 20:20:17,971 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-22 20:20:18,034 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 20:20:18,039 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 20:20:23,412 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:20:23,439 basehttp 124 "GET /addresses/ HTTP/1.1" 200 16
+INFO 2018-11-22 20:20:28,449 basehttp 124 "GET /areas/140000/ HTTP/1.1" 200 364
+INFO 2018-11-22 20:20:31,832 basehttp 124 "GET /areas/141000/ HTTP/1.1" 200 550
+ERROR 2018-11-22 20:21:02,637 exceptions 25 [<areas.views.AddressView object at 0x7f481824f390>] (1048, "Column 'province_id' cannot be null")
+ERROR 2018-11-22 20:21:02,643 basehttp 124 "POST /addresses/ HTTP/1.1" 507 35
+INFO 2018-11-22 20:21:46,528 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+WARNING 2018-11-22 20:21:46,574 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 20:21:46,580 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 3956
+INFO 2018-11-22 20:21:50,964 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:21:50,984 basehttp 124 "GET /addresses/ HTTP/1.1" 200 16
+INFO 2018-11-22 20:21:55,651 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:21:56,975 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 532
+INFO 2018-11-22 20:22:47,322 basehttp 124 "POST /addresses/ HTTP/1.1" 201 289
+INFO 2018-11-22 20:22:56,580 basehttp 124 "OPTIONS /addresses/1/status/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:22:56,595 base 152 Not Found: /addresses/1/status/
+WARNING 2018-11-22 20:22:56,596 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 404 3962
+WARNING 2018-11-22 20:22:57,076 base 152 Not Found: /addresses/1/status/
+WARNING 2018-11-22 20:22:57,080 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 404 3962
+WARNING 2018-11-22 20:22:57,430 base 152 Not Found: /addresses/1/status/
+WARNING 2018-11-22 20:22:57,430 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 404 3962
+WARNING 2018-11-22 20:22:58,091 base 152 Not Found: /addresses/1/status/
+WARNING 2018-11-22 20:22:58,092 basehttp 124 "PUT /addresses/1/status/ HTTP/1.1" 404 3962
+INFO 2018-11-22 20:23:18,002 basehttp 124 "OPTIONS /addresses/1/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:23:18,055 base 152 Not Found: /addresses/1/
+WARNING 2018-11-22 20:23:18,061 basehttp 124 "DELETE /addresses/1/ HTTP/1.1" 404 3944
+INFO 2018-11-22 20:25:21,521 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:25:21,614 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:25:21,789 basehttp 124 "GET /addresses/ HTTP/1.1" 200 305
+INFO 2018-11-22 20:25:29,903 basehttp 124 "DELETE /addresses/1/ HTTP/1.1" 204 0
+INFO 2018-11-22 20:25:42,448 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 424
+INFO 2018-11-22 20:25:43,440 basehttp 124 "GET /areas/130400/ HTTP/1.1" 200 619
+INFO 2018-11-22 20:25:59,247 basehttp 124 "POST /addresses/ HTTP/1.1" 201 294
+INFO 2018-11-22 20:26:08,066 basehttp 124 "GET /areas/210000/ HTTP/1.1" 200 466
+INFO 2018-11-22 20:26:09,209 basehttp 124 "GET /areas/210300/ HTTP/1.1" 200 244
+INFO 2018-11-22 20:26:11,365 basehttp 124 "OPTIONS /addresses/2/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:26:13,691 basehttp 124 "PUT /addresses/2/ HTTP/1.1" 200 294
+INFO 2018-11-22 20:26:18,650 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:26:18,666 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:18,669 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:19,096 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:19,097 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:19,297 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:19,298 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:19,504 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:19,505 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:19,758 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:19,760 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:20,213 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:20,215 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-22 20:26:29,584 base 152 Not Found: /addresses/2/status/
+WARNING 2018-11-22 20:26:29,585 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 404 4140
+INFO 2018-11-22 20:28:14,384 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:28:14,467 basehttp 124 "GET /addresses/ HTTP/1.1" 200 310
+WARNING 2018-11-22 20:28:52,243 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+WARNING 2018-11-22 20:28:54,428 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:29:00,434 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 424
+INFO 2018-11-22 20:29:01,373 basehttp 124 "GET /areas/130300/ HTTP/1.1" 200 250
+INFO 2018-11-22 20:29:12,533 basehttp 124 "POST /addresses/ HTTP/1.1" 201 297
+WARNING 2018-11-22 20:29:20,435 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+WARNING 2018-11-22 20:29:27,985 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+WARNING 2018-11-22 20:29:36,944 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:29:42,015 basehttp 124 "OPTIONS /addresses/3/title/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:29:42,041 base 152 Not Found: /addresses/3/title/
+WARNING 2018-11-22 20:29:42,043 basehttp 124 "PUT /addresses/3/title/ HTTP/1.1" 404 4322
+WARNING 2018-11-22 20:29:42,814 base 152 Not Found: /addresses/3/title/
+WARNING 2018-11-22 20:29:42,815 basehttp 124 "PUT /addresses/3/title/ HTTP/1.1" 404 4322
+WARNING 2018-11-22 20:30:14,009 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:30:24,450 basehttp 124 "OPTIONS /addresses/3/status/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:31:19,280 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+WARNING 2018-11-22 20:31:19,296 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:33:41,460 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:33:41,587 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+WARNING 2018-11-22 20:36:12,031 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:44:57,944 basehttp 124 "OPTIONS /addresses/3/status/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:45:02,885 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:45:08,385 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:45:12,023 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+WARNING 2018-11-22 20:45:32,580 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 400 278
+INFO 2018-11-22 20:46:31,610 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-22 20:47:19,051 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-22 20:47:19,342 basehttp 124 "GET /oauth/qq/user/?code=67A02E018CA26CC52C6A3949C606C7B8 HTTP/1.1" 500 20019
+ERROR 2018-11-22 20:47:29,534 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 57, in get
+    access_token = qq.get_access_token(code)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/QQLoginTool/QQtool.py", line 63, in get_access_token
+    raise Exception('access_token获取失败')
+Exception: access_token获取失败
+ERROR 2018-11-22 20:47:29,677 basehttp 124 "GET /oauth/qq/user/?code=67A02E018CA26CC52C6A3949C606C7B8 HTTP/1.1" 500 19573
+INFO 2018-11-22 20:50:44,631 basehttp 124 "GET /usernames/18535813333/count/ HTTP/1.1" 200 11
+INFO 2018-11-22 20:50:56,307 basehttp 124 "GET /mobiles/18535813333/count/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:51:03,481 basehttp 124 "GET /usernames/python8/count/ HTTP/1.1" 200 11
+INFO 2018-11-22 20:51:03,585 basehttp 124 "GET /mobiles/18535813333/count/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:51:03,881 basehttp 124 "GET /sms_codes/18535813333/ HTTP/1.1" 200 16
+INFO 2018-11-22 20:51:14,962 basehttp 124 "OPTIONS /users/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:51:15,044 basehttp 124 "GET /mobiles/18535813333/count/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:51:15,046 basehttp 124 "GET /usernames/python8/count/ HTTP/1.1" 200 11
+INFO 2018-11-22 20:51:33,893 basehttp 124 "POST /users/ HTTP/1.1" 201 52
+INFO 2018-11-22 20:51:47,724 basehttp 124 "OPTIONS /cart/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:51:47,781 base 152 Not Found: /cart/
+WARNING 2018-11-22 20:51:47,791 basehttp 124 "GET /cart/ HTTP/1.1" 404 4283
+INFO 2018-11-22 20:51:51,840 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:51:51,893 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-11-22 20:51:54,109 basehttp 124 "GET /oauth/qq/authorization/?next=/user_center_info.html HTTP/1.1" 200 196
+ERROR 2018-11-22 20:52:30,217 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-22 20:52:30,311 basehttp 124 "GET /oauth/qq/user/?code=A9CE75D58A5B17A3245E571297A035F1 HTTP/1.1" 500 20040
+INFO 2018-11-22 20:55:30,177 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:55:30,250 basehttp 124 "GET /user/ HTTP/1.1" 401 38
+INFO 2018-11-22 20:55:43,829 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:55:49,905 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 209
+INFO 2018-11-22 20:55:51,276 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-22 20:55:51,294 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:55:51,324 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 20:55:51,326 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4319
+INFO 2018-11-22 20:55:56,442 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:55:56,458 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 20:55:56,554 basehttp 124 "GET /addresses/ HTTP/1.1" 200 16
+INFO 2018-11-22 20:55:59,928 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 34
+INFO 2018-11-22 20:56:01,695 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 532
+INFO 2018-11-22 20:56:18,383 basehttp 124 "POST /addresses/ HTTP/1.1" 201 281
+INFO 2018-11-22 20:56:19,086 basehttp 124 "POST /addresses/ HTTP/1.1" 201 281
+INFO 2018-11-22 20:56:30,288 basehttp 124 "OPTIONS /addresses/5/title/ HTTP/1.1" 200 0
+WARNING 2018-11-22 20:56:30,314 base 152 Not Found: /addresses/5/title/
+WARNING 2018-11-22 20:56:30,315 basehttp 124 "PUT /addresses/5/title/ HTTP/1.1" 404 4322
+WARNING 2018-11-22 20:56:31,328 base 152 Not Found: /addresses/5/title/
+WARNING 2018-11-22 20:56:31,329 basehttp 124 "PUT /addresses/5/title/ HTTP/1.1" 404 4322
+INFO 2018-11-22 20:56:36,605 basehttp 124 "OPTIONS /addresses/4/status/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:56:41,136 basehttp 124 "PUT /addresses/4/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 20:56:45,234 basehttp 124 "OPTIONS /addresses/5/status/ HTTP/1.1" 200 0
+INFO 2018-11-22 20:56:47,197 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:04:52,017 basehttp 124 "PUT /addresses/4/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:04:58,817 basehttp 124 "PUT /addresses/5/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:11:53,387 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:12:06,884 basehttp 124 "GET /user/ HTTP/1.1" 200 77
+INFO 2018-11-22 21:12:06,907 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 21:12:06,936 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 21:12:06,938 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4319
+INFO 2018-11-22 21:12:19,349 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+ERROR 2018-11-22 21:12:56,445 exception 135 Internal Server Error: /email/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/generics.py", line 228, in put
+    return self.update(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 70, in update
+    self.perform_update(serializer)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/mixins.py", line 80, in perform_update
+    serializer.save()
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/serializers.py", line 198, in save
+    "You cannot call `.save()` after accessing `serializer.data`."
+AssertionError: You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. 
+ERROR 2018-11-22 21:12:56,680 basehttp 124 "PUT /email/ HTTP/1.1" 500 20168
+INFO 2018-11-22 21:13:09,438 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-22 21:14:28,243 basehttp 124 "GET /emails/verification/?token=eyJpYXQiOjE1NDI4OTIzODcsImFsZyI6IkhTNTEyIiwiZXhwIjoxNTQyODkyNjg3fQ.eyJuYW1lIjoicHl0aG9uOCJ9.EXksy4VaCT1EUtEcgmqHg7laKLCnmdRH47Udj7aozScwSNeA5BWbDPy1s6DjA7sMQ0LkyjWiKOoL8yS8LMwTZg HTTP/1.1" 200 16
+INFO 2018-11-22 21:22:26,161 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+ERROR 2018-11-22 21:24:09,897 exception 135 Internal Server Error: /oauth/qq/user/
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 33, in get_username
+    username = user.get_username()
+AttributeError: 'OAuthQQUser' object has no attribute 'get_username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/django/views/generic/base.py", line 68, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 495, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 455, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework/views.py", line 492, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/python/Desktop/django_meiduo/meiduo/meiduo_mall/meiduo_mall/apps/oauth/views.py", line 76, in get
+    payload = jwt_payload_handler(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/utils.py", line 34, in jwt_payload_handler
+    username = get_username(user)
+  File "/home/python/.virtualenvs/django_env/lib/python3.5/site-packages/rest_framework_jwt/compat.py", line 35, in get_username
+    username = user.username
+AttributeError: 'OAuthQQUser' object has no attribute 'username'
+ERROR 2018-11-22 21:24:09,956 basehttp 124 "GET /oauth/qq/user/?code=41EFD4B76D3732EBE35BCBB03ED30D65 HTTP/1.1" 500 20048
+INFO 2018-11-22 21:29:27,443 basehttp 124 "GET /oauth/qq/authorization/?next=/ HTTP/1.1" 200 175
+INFO 2018-11-22 21:30:02,495 basehttp 124 "GET /oauth/qq/user/?code=9B3877E2DA22E15BD61AF45313A24869 HTTP/1.1" 200 234
+INFO 2018-11-22 21:30:11,574 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:30:13,438 basehttp 124 "GET /user/ HTTP/1.1" 200 96
+INFO 2018-11-22 21:30:13,453 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 21:30:13,479 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 21:30:13,482 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4319
+INFO 2018-11-22 21:30:16,087 basehttp 124 "OPTIONS /email/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:30:27,872 basehttp 124 "PUT /email/ HTTP/1.1" 200 31
+INFO 2018-11-22 21:30:40,841 basehttp 124 "GET /emails/verification/?token=eyJhbGciOiJIUzUxMiIsImV4cCI6MTU0Mjg5MzcyNiwiaWF0IjoxNTQyODkzNDI2fQ.eyJuYW1lIjoicHl0aG9uNCJ9.ZxdX0YuhT_WKGU6tJhQGIaucPH54LizdgWHZkpSckjrflg8Hchap9w48sRIn6TIsl5luoXWgCbMZh3Vq8Lfa-w HTTP/1.1" 200 16
+INFO 2018-11-22 21:34:32,189 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:34:42,461 basehttp 124 "GET /user/ HTTP/1.1" 200 95
+INFO 2018-11-22 21:34:42,499 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-22 21:34:42,515 base 152 Not Found: /browse_histories/
+WARNING 2018-11-22 21:34:42,519 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4319
+INFO 2018-11-22 21:34:44,974 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:34:45,022 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:34:45,081 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:34:47,692 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:34:47,757 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:34:50,158 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:34:50,209 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:38:57,780 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:43:00,503 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:43:00,587 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:43:04,663 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:43:06,595 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:43:06,663 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:47,338 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:44:47,370 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:44:47,417 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:48,926 basehttp 124 "OPTIONS /addresses/2/status/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:44:48,942 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:44:50,576 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:44:50,624 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:51,596 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:44:51,684 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:51,969 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:44:52,015 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:52,216 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:44:52,283 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:44:57,211 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:45:00,583 basehttp 124 "OPTIONS /addresses/3/status/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:45:00,626 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:45:20,224 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:45:20,253 basehttp 124 "GET /addresses/ HTTP/1.1" 200 608
+INFO 2018-11-22 21:45:55,094 basehttp 124 "PUT /addresses/2/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:46:06,802 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:46:54,966 basehttp 124 "OPTIONS /addresses/2/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:46:55,028 basehttp 124 "DELETE /addresses/2/ HTTP/1.1" 204 0
+INFO 2018-11-22 21:46:57,262 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:46:57,285 basehttp 124 "GET /addresses/ HTTP/1.1" 200 313
+INFO 2018-11-22 21:47:39,996 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:49:27,720 basehttp 124 "GET /areas/430000/ HTTP/1.1" 200 487
+INFO 2018-11-22 21:49:35,995 basehttp 124 "GET /areas/430300/ HTTP/1.1" 200 166
+INFO 2018-11-22 21:49:43,199 basehttp 124 "OPTIONS /addresses/3/ HTTP/1.1" 200 0
+INFO 2018-11-22 21:49:43,229 basehttp 124 "PUT /addresses/3/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:49:51,628 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-22 21:49:51,730 basehttp 124 "GET /addresses/ HTTP/1.1" 200 313
+INFO 2018-11-22 21:50:01,839 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 21:50:02,771 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+INFO 2018-11-22 21:50:05,068 basehttp 124 "PUT /addresses/3/ HTTP/1.1" 200 16
+INFO 2018-11-22 21:50:35,244 basehttp 124 "GET /areas/120000/ HTTP/1.1" 200 34
+INFO 2018-11-22 21:50:37,789 basehttp 124 "GET /areas/120100/ HTTP/1.1" 200 532
+INFO 2018-11-22 21:50:44,314 basehttp 124 "OPTIONS /addresses/undefined/ HTTP/1.1" 200 0
+WARNING 2018-11-22 21:50:44,327 base 152 Not Found: /addresses/undefined/
+WARNING 2018-11-22 21:50:44,329 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 4328
+WARNING 2018-11-22 21:50:45,386 base 152 Not Found: /addresses/undefined/
+WARNING 2018-11-22 21:50:45,387 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 4328
+WARNING 2018-11-22 21:51:31,804 base 152 Not Found: /addresses/undefined/
+WARNING 2018-11-22 21:51:31,806 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 4143
+INFO 2018-11-22 21:51:55,119 basehttp 124 "GET /areas/110000/ HTTP/1.1" 200 34
+INFO 2018-11-22 21:52:02,579 basehttp 124 "GET /areas/110100/ HTTP/1.1" 200 535
+WARNING 2018-11-22 21:52:21,926 base 152 Not Found: /addresses/undefined/
+WARNING 2018-11-22 21:52:21,927 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 4143
+WARNING 2018-11-22 21:52:24,378 base 152 Not Found: /addresses/undefined/
+WARNING 2018-11-22 21:52:24,379 basehttp 124 "PUT /addresses/undefined/ HTTP/1.1" 404 4143
+INFO 2018-11-24 09:18:04,599 basehttp 124 "OPTIONS /authorizations/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:18:04,747 basehttp 124 "POST /authorizations/ HTTP/1.1" 200 234
+INFO 2018-11-24 09:18:07,802 basehttp 124 "OPTIONS /user/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:18:07,873 basehttp 124 "GET /user/ HTTP/1.1" 200 115
+INFO 2018-11-24 09:18:07,892 basehttp 124 "OPTIONS /browse_histories/ HTTP/1.1" 200 0
+WARNING 2018-11-24 09:18:07,916 base 152 Not Found: /browse_histories/
+WARNING 2018-11-24 09:18:07,923 basehttp 124 "GET /browse_histories/ HTTP/1.1" 404 4134
+INFO 2018-11-24 09:18:10,185 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:18:10,200 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-24 09:18:10,368 basehttp 124 "GET /addresses/ HTTP/1.1" 200 313
+INFO 2018-11-24 09:18:18,185 basehttp 124 "OPTIONS /addresses/3/status/ HTTP/1.1" 200 0
+WARNING 2018-11-24 09:18:18,191 base 152 Not Found: /addresses/3/status/
+WARNING 2018-11-24 09:18:18,192 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-24 09:18:19,259 base 152 Not Found: /addresses/3/status/
+WARNING 2018-11-24 09:18:19,260 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 404 4140
+WARNING 2018-11-24 09:18:19,884 base 152 Not Found: /addresses/3/status/
+WARNING 2018-11-24 09:18:19,884 basehttp 124 "PUT /addresses/3/status/ HTTP/1.1" 404 4140
+INFO 2018-11-24 09:18:24,157 basehttp 124 "GET /areas/130000/ HTTP/1.1" 200 424
+INFO 2018-11-24 09:18:25,290 basehttp 124 "GET /areas/130200/ HTTP/1.1" 200 463
+INFO 2018-11-24 09:18:35,164 basehttp 124 "POST /addresses/ HTTP/1.1" 201 287
+INFO 2018-11-24 09:18:37,107 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-24 09:18:37,147 basehttp 124 "GET /addresses/ HTTP/1.1" 200 601
+INFO 2018-11-24 09:27:18,828 basehttp 124 "OPTIONS /addresses/3/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:27:18,893 basehttp 124 "DELETE /addresses/3/ HTTP/1.1" 204 0
+INFO 2018-11-24 09:27:21,026 basehttp 124 "GET /areas/ HTTP/1.1" 200 1204
+INFO 2018-11-24 09:27:21,064 basehttp 124 "GET /addresses/ HTTP/1.1" 200 303
+INFO 2018-11-24 09:29:04,817 basehttp 124 "GET /areas/210000/ HTTP/1.1" 200 466
+INFO 2018-11-24 09:29:05,893 basehttp 124 "GET /areas/210200/ HTTP/1.1" 200 346
+INFO 2018-11-24 09:29:19,898 basehttp 124 "OPTIONS /addresses/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:29:19,933 basehttp 124 "POST /addresses/ HTTP/1.1" 201 277
+INFO 2018-11-24 09:29:24,724 basehttp 124 "OPTIONS /addresses/7/ HTTP/1.1" 200 0
+INFO 2018-11-24 09:29:24,736 basehttp 124 "DELETE /addresses/7/ HTTP/1.1" 204 0

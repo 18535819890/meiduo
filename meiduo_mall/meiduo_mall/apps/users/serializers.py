@@ -1,10 +1,12 @@
+from django.conf import settings
 from rest_framework import serializers
 from django_redis import get_redis_connection
 from users.models import User
 import re
 from rest_framework_jwt.settings import api_settings
-
-
+from django.core.mail import send_mail
+from celery_tasks.email.tasks import send_email
+from itsdangerous import TimedJSONWebSignatureSerializer as TJS
 class CreateUserSerializer(serializers.ModelSerializer):
     #显示模型类中没有的字段
     password2=serializers.CharField(max_length=20,min_length=8,write_only=True)
@@ -72,3 +74,37 @@ class CreateUserSerializer(serializers.ModelSerializer):
         user.token=token
 
         return user
+
+class UserDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=("username","mobile","email","email_active","default_address")
+
+
+
+class EmailSeraizlizers(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=("email",)
+
+
+    def update(self, instance, validated_data):
+
+        instance.email=validated_data["email"]
+        instance.save()
+
+        # 加密用户数据
+        data={"name":instance.username}
+        tjs=TJS(settings.SECRET_KEY,300)
+        token=tjs.dumps(data).decode()
+        # verify_url = "http://www.meiduo.site:8080/success_verify_email.html?token="+token
+        # subject="美多商城验证邮箱"
+        # html_message='<p>尊敬的用户您好！</p>' \
+        #                '<p>感谢您使用美多商城。</p>' \
+        #              '<p>您的邮箱为：%s 。请点击此链接激活您的邮箱：</p>' \
+        #              '<p><a href="%s">%s<a></p>' % (validated_data['email'], verify_url, verify_url)
+
+        # send_mail(subject,'',settings.EMAIL_FROM,[validated_data["email"]],html_message=html_message)
+        # 发送短信
+        send_email.delay(token, validated_data["email"])
+        return instance
