@@ -48,6 +48,11 @@ INSTALLED_APPS = [
     'corsheaders',#跨域模块
     'oauth.apps.OauthConfig',
     'areas.apps.AreasConfig',
+    'advertisings.apps.AdvertisingsConfig',
+    'goods.apps.GoodsConfig',
+    'ckeditor',  # 富文本编辑器
+    'ckeditor_uploader',  # 富文本编辑器上传图片模块
+    'django_crontab',  # 定时任务
 
 
 ]
@@ -68,7 +73,7 @@ ROOT_URLCONF = 'meiduo_mall.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -259,3 +264,27 @@ REST_FRAMEWORK_EXTENSIONS = {
     # 缓存存储
     'DEFAULT_USE_CACHE': 'default',
 }
+
+# 富文本编辑器ckeditor配置
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',  # 工具条功能
+        'height': 300,  # 编辑器高度
+        # 'width': 300,  # 编辑器宽
+    },
+}
+CKEDITOR_UPLOAD_PATH = ''  # 上传图片保存路径，使用了FastDFS，所以此处设为''
+
+# django文件存储
+DEFAULT_FILE_STORAGE = 'meiduo_mall.utils.fastdfs.fdfs_storage.FastDFSStorage'
+
+# FastDFS
+FDFS_URL = 'http://image.meiduo.site:8888/'
+FDFS_CLIENT_CONF = os.path.join(BASE_DIR, 'utils/fastdfs/client.conf')
+
+# 定时任务
+CRONJOBS = [
+    # 每1小时执行一次生成主页静态文件
+    #分 时 日 月 周      生成静态文件的方法（函数）的路径    log日志的路径
+    ('* */1 * * *', 'advertisings.crons.generate_static_index_html', '>> /home/python/Desktop/django_meiduo/meiduo/meiduo_mall/logs/crontab.log')
+]
