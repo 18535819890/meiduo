@@ -1,4 +1,6 @@
 #在goods.utils.py文件中封装方法，获取商品分类菜单数据
+from rest_framework.pagination import PageNumberPagination
+from collections import OrderedDict
 import os
 from collections import OrderedDict
 
@@ -66,3 +68,14 @@ def get_categories():
                 cat2.sub_cats.append(cat3)
             categories[group_id]['sub_cats'].append(cat2)
     return categories
+
+#分页器
+class PageNUM(PageNumberPagination):
+    # 指定前端请求分页时的指定参数
+    # bug:page_query_param = "page_size"导致获取不到page
+    page_size_query_param = "page_size"
+    # 每页最大数据
+    max_page_size = 10
+
+
+

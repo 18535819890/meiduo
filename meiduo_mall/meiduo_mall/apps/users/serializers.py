@@ -1,6 +1,8 @@
 from django.conf import settings
 from rest_framework import serializers
 from django_redis import get_redis_connection
+
+from goods.models import SKU
 from users.models import User
 import re
 from rest_framework_jwt.settings import api_settings
@@ -108,3 +110,38 @@ class EmailSeraizlizers(serializers.ModelSerializer):
         # 发送短信
         send_email.delay(token, validated_data["email"])
         return instance
+
+
+class SKUHistoriesSerialzier(serializers.Serializer):
+    sku_id=serializers.IntegerField(min_value=1)
+
+    def validate(self, attrs):
+
+        # 判断sku——id对应的商品是否存在
+        try:
+            SKU.objects.get(id=attrs["sku_id"])
+        except:
+            raise serializers.ValidationError("查询的商品不存在")
+        return attrs
+
+
+    def create(self, validated_data):
+        # 1、建立redis连接
+        coon=get_redis_connection("history")
+        #提取序列化器中的对象user=self.context['requset'].user
+        user = self.context['request'].user
+
+        # 2、判纽sku——id是否存储，存储过则删除
+        coon.lrem("history_%s"%user.id,0,validated_data["sku_id"])
+        # 3、写入sku——id
+        coon.lpush('history_%s'%user.id,validated_data['sku_id'])
+        # 4、控制列表写入数量,5条
+        coon.ltrim('history_%s'%user.id,0,4)
+        # 结果返回
+        return validated_data
+
+
+class SKUListSerialzier(serializers.ModelSerializer):
+    class Meta:
+        model=SKU
+        fields="__all__"

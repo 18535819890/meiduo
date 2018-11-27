@@ -5,8 +5,10 @@ from django_redis import get_redis_connection
 from django.shortcuts import render
 from threading import Thread
 from rest_framework import status
-from rest_framework.generics import CreateAPIView,RetrieveAPIView,UpdateAPIView
+from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
 from rest_framework.views import APIView
+
+from goods.models import SKU
 from meiduo_mall.libs.yuntongxun.sms import CCP
 from users.models import User
 from rest_framework.response import Response
@@ -15,7 +17,8 @@ from celery_tasks.sms_code.tasks import send_sms_code
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from itsdangerous import TimedJSONWebSignatureSerializer as TJS
 # Create your views here.
-from users.serializers import CreateUserSerializer, UserDetailSerializer, EmailSeraizlizers
+from users.serializers import CreateUserSerializer, UserDetailSerializer, EmailSeraizlizers, SKUHistoriesSerialzier, \
+    SKUListSerialzier
 
 
 class Sms_View(APIView):
@@ -46,32 +49,35 @@ class Sms_View(APIView):
         # 返回结果
         return Response({"message": "ok"})
 
+
 class User_View(APIView):
     """
         判断用户名号
     """
-    def get(self,request,username):
-        #获取参数,正则匹配
-        #查询数据库中name所对应数据对象的数量
-        count=User.objects.filter(username=username).count()
-        #返回结果
+
+    def get(self, request, username):
+        # 获取参数,正则匹配
+        # 查询数据库中name所对应数据对象的数量
+        count = User.objects.filter(username=username).count()
+        # 返回结果
         return Response({
-            'count':count
+            'count': count
         })
+
 
 class Mobile_View(APIView):
     """
          判断手机号
      """
-    def get(self,request,mobile):
 
-        #获取mobile,正则匹配
-        #查询数据库中mobile所对应数据对象的数量
-        count=User.objects.filter(mobile=mobile).count()
-        #返回结果
+    def get(self, request, mobile):
+        # 获取mobile,正则匹配
+        # 查询数据库中mobile所对应数据对象的数量
+        count = User.objects.filter(mobile=mobile).count()
+        # 返回结果
         return Response({
-            'mobile':mobile,
-            'count':count,
+            'mobile': mobile,
+            'count': count,
         })
 
 
@@ -90,6 +96,7 @@ class UserDetailView(RetrieveAPIView):
     def get_object(self):
         return self.request.user
 
+
 class EmailView(UpdateAPIView):
     """
         更新邮箱
@@ -102,25 +109,44 @@ class EmailView(UpdateAPIView):
 
 
 class EmailVerifyView(APIView):
-    def get(self,request):
-        #1.获取数据
-        token=request.query_params.get("token",None)
+    def get(self, request):
+        # 1.获取数据
+        token = request.query_params.get("token", None)
         if token is None:
-            return Response({"errors":"token不存在"},status=400)
-        #2.验证数据,解密
-        tjs=TJS(settings.SECRET_KEY,300)
+            return Response({"errors": "token不存在"}, status=400)
+        # 2.验证数据,解密
+        tjs = TJS(settings.SECRET_KEY, 300)
         try:
-            data=tjs.loads(token)
+            data = tjs.loads(token)
         except:
-            return Response({"error":"token无效"},status=400)
+            return Response({"error": "token无效"}, status=400)
         # 3、获取⽤户名
-        username=data["name"]
+        username = data["name"]
         # 4、通过⽤户名查询数据对象
-        user=User.objects.get(username=username)
+        user = User.objects.get(username=username)
         # 5、更新邮箱验证状态
-        user.email_active=True
+        user.email_active = True
         user.save()
         # 6、返回结果
         return Response({
-            "message":"ok"
+            "message": "ok"
         })
+
+
+class SKUHistoriesView(CreateAPIView):
+    """
+        保存用户浏览历史记录
+    """
+    serializer_class = SKUHistoriesSerialzier
+
+    def get(self, request):
+        # 1、获取用户对象
+        user = request.user
+        # 2、查询redis中sku——id
+        conn = get_redis_connection("history")
+        sku_ids = conn.lrange("history_%s" % user.id, 0, 6)
+        # 3、通过sku——id查询数据对象
+        skus = SKU.objects.filter(id__in=sku_ids)
+        # 4、序列化返回
+        ser = SKUListSerialzier(skus, many=True)
+        return Response(ser.data)
