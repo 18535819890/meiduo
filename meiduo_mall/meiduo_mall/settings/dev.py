@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',  # 富文本编辑器上传图片模块
     'django_crontab',  # 定时任务
     'haystack',#调用搜索引擎
+    'carts.apps.CartsConfig',
 
 
 ]
@@ -315,3 +316,7 @@ HAYSTACK_CONNECTIONS = {
 
 # 当添加、修改、删除数据时，自动生成索引
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+
+
+#跨域请求中允许后端使用cookie
+CORS_ALLOW_CREDENTIALS = True
