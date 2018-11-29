@@ -1,5 +1,4 @@
 from random import randint
-
 from django.conf import settings
 from django_redis import get_redis_connection
 from django.shortcuts import render
@@ -7,18 +6,19 @@ from threading import Thread
 from rest_framework import status
 from rest_framework.generics import CreateAPIView, RetrieveAPIView, UpdateAPIView
 from rest_framework.views import APIView
-
 from goods.models import SKU
 from meiduo_mall.libs.yuntongxun.sms import CCP
 from users.models import User
 from rest_framework.response import Response
 from celery_tasks.sms_code.tasks import send_sms_code
-
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from itsdangerous import TimedJSONWebSignatureSerializer as TJS
-# Create your views here.
 from users.serializers import CreateUserSerializer, UserDetailSerializer, EmailSeraizlizers, SKUHistoriesSerialzier, \
     SKUListSerialzier
+from rest_framework_jwt.views import ObtainJSONWebToken
+
+# Create your views here.
+from users.utils import merge_cart_cookie_to_redis
 
 
 class Sms_View(APIView):
@@ -150,3 +150,23 @@ class SKUHistoriesView(CreateAPIView):
         # 4、序列化返回
         ser = SKUListSerialzier(skus, many=True)
         return Response(ser.data)
+
+
+class UserAuthorizeView(ObtainJSONWebToken):
+    """
+    用户认证
+    """
+    def post(self, request, *args, **kwargs):
+        # 调用父类的方法，获取drf jwt扩展默认的认证用户处理结果
+        response = super().post(request, *args, **kwargs)
+
+        # 仿照drf jwt扩展对于用户登录的认证方式，判断用户是否认证登录成功
+
+        serializer = self.get_serializer(data=request.data)
+
+        if serializer.is_valid():
+            user = serializer.object.get('user') or request.user
+            # 如果用户登录认证成功，则合并购物车
+            response = merge_cart_cookie_to_redis(request,response,user)
+
+        return response
